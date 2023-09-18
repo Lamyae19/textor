@@ -5,7 +5,7 @@ from PIL import Image
 import pytesseract
 import datetime
 app = Flask(__name__)  # static_url_path="/static"
-
+from models.models import AUDIO , IMAGE
 
 @app.route('/')
 def index():
@@ -30,13 +30,14 @@ def images():
     return render_template('image.html')
 
 
-@app.route('/progressData', methods=['POST', 'GET'])
+@app.route('/audioToText', methods=['POST', 'GET'])
 def progressData():
     audio_file = request.files['audio']
     current_datetime = datetime.datetime.now()
     path = "uploads/"+ current_datetime.strftime("%Y%m%d%H%M%S")  + ".wav"
-    audio_file.save()
-    return render_template('audio.html')
+    audio_file.save(path)
+    text = AUDIO(audioPath=path)
+    return {"text" : text}
 
 
 @app.route('/convert',methods=['GET','POST'])

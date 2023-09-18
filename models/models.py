@@ -1,7 +1,11 @@
 from transformers import pipeline
-audio = pipeline("automatic-speech-recognition", model="facebook/whisper-large")
+#audio = pipeline("automatic-speech-recognition", model="facebook/whisper-large")
 
-def extractTextFrom(audioPath):
-    text = audio(audioPath)
+def AUDIO(audioPath):
+    #text = audio(audioPath)
+    text = "cococ mon ami "
+    return text
+def IMAGE(image):
+    text = "cococ mon ami "
     return text
 

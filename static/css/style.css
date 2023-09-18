@@ -1,0 +1,390 @@
+
+ /*page Home*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url('/static/images/ai-nuclear-energy-background-future-innovation-disruptive-technology.jpg');
+    background-position: center;
+    background-size: cover;   
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+   list-style: none;
+   display: inline-block;
+   margin-left: 60px; 
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #fc036b;
+    text-decoration: underline;
+}
+#menu-icon{
+    color: white;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.row{
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    margin-top: 190px;
+}
+.col{
+    flex-basis: 60%;
+}
+.col h1{
+    color: #fc036b;
+    font-size: 44px;
+
+}
+.col p{
+    color: #fc036b;
+    font-size: 20px;
+    margin-right: auto;
+}
+.col h5{
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.button:hover{
+    background-color: #d8035c;
+}
+
+.button{
+    width: 180px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 0;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+    cursor: pointer;
+    text-align: center;
+    /*padding: 8px 15px;*/
+    background: #fc036b;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.event{
+    width: 80%;
+    margin: 80px auto;
+}
+.line{
+    width: 150px;
+    height: 4px;
+    background: #fc036b;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: rgb(73, 73, 126);
+}
+.row1{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+.row1 img{
+    width: 350px;
+    
+}
+#img{
+    width: 340px;
+}
+.row1 .col1{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.event .row1 {
+    margin-top: 20px;
+}
+#imga{
+    width: 340px;
+}
+.row3{
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+}
+.col2{
+    border: #7c7c7c 2px solid;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+h4{
+    font-size: 3vmin;
+    color: #484872;
+    margin: 20px auto;
+}
+p{
+    color: #7c7c7c;
+    padding: 0 40px;
+}
+.event .button {
+    margin-top: 39px;
+}
+.result{
+    font-size: 20px;
+    color: #484872;
+    padding-left: 0;
+    margin-top: 18px;
+}
+.result-text{
+    font-size: 15px;
+    color: #000;
+}
+
+
+.footer{
+    width: 100%;
+    min-height: 95px;
+    padding: 20px 80px;
+    margin: 0;
+    background: #1a242f;
+    text-align: center;
+}
+.footer p{
+    color: whitesmoke;
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 15px;
+}
+
+/* ############################ page Home*/
+
+.container1{
+    width: 100%;
+    height: 100vh;  
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.navbar1{
+    /*background: rgb(35, 52, 86);*/
+    background: #293F64;
+    width: 100%;
+    height: 12%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo1{
+    margin-left: 58px;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+audio {
+    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+  width: 50%;
+    height: 30px;
+    border-radius: 40px;
+    justify-self: center;
+}
+
+
+/* Style the file input */
+input[type="file"] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    color: #007BFF;
+}
+
+/* Style the buttons 
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Style the audio controls */
+audio {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Center the main title 
+h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+/* Style the container 
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+Style the buttons 
+.container button {
+    padding: 10px 20px;
+    background-color: rgb(60, 60, 255);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+.container input[type="file"]{
+    display: none;
+}
+.container label{
+    font-size: 15px;
+    cursor: pointer;
+}
+.container label:hover{
+    color: rgb(240, 71, 71);
+}
+
+/* Style the input file element 
+input[type="file"] {
+    display: none;
+}*/
+
+/* Style the audio player 
+audio {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Style the "Audio to text" button 
+.try-now a button {
+    padding: 10px 20px;
+    background-color: rgb(60, 60, 255);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.try-now a button:hover {
+    background-color: rgb(60, 60, 255);
+}
+
+/* Add responsiveness for smaller screens 
+@media (max-width: 768px) {
+    .slider {
+        padding: 20px;
+    }
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Style the result container 
+.result-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the result text 
+.result-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    /* You can add more styling as needed 
+}
+*/

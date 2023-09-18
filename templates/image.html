@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Convert Image To Text</title>
+</head>
+<body> 
+    <div  class="navbar1">
+        <a src="#" class="logo1">ExtraText</a>
+        <nav class="nav-links">
+            
+        <ul>
+            <li><a href="{{ url_for('home')}}" methods="POST">Home</a></li>
+            <li><a href="{{ url_for('home')}}#services" methods="POST"#services">Service</a></li>
+            <li><a href="#" methods="POST">About</a></li>
+            <li><div class='bx bx-menu' id="menu-icon"></div></li>
+        </ul>
+        </nav>
+    </div>
+    
+    
+    
+    <br><br><br><br><br><br>
+    <section class="event" id="services">
+        <div class="title">
+            <h1>Extract Text From Image</h1> 
+            <div class="line"></div>
+            <br><br><br>
+        </div>
+        <div class="row2">
+            <div class="col2">
+                    <form action="/convert" enctype="multipart/form-data" method="post" id="form">
+                    <span>Select audio file: </span>
+                    <label>
+                    <input type="file" name="image_file" accept="image/*" id="imagefile">
+                    <span><u>here</u></span>
+                </label>  <br> <br>
+                <button type="submit" class="button">Convert</button>
+                    <br><br>
+                </form>
+                
+            </div>
+            <div class="row3">
+            <div class="col3">
+               <!-- <img id="{{img}}" src="" controls></img>-->
+              
+            
+               <h3 class="result">Image:</h3><br>
+                <img src="{{file_path}}" controls id="imga"></img>
+            </div>    
+            <div class="col3">    
+                <h3 class="result">Result:</h3><br>
+                <p class="result-text">{{text}}</p>
+            
+            </div>
+        </div>
+        </div>
+        <br><br><br>
+      </section>
+      <section class="footer">
+        <div class="footer-content">
+            <p>ExtraText is a web application who can extract a text from a image or convert audio to text in minute.Simple and easy to use it</p>
+            <p>Copyright ©  2023 ExtraText</p>
+      </section>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
+

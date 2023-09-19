@@ -3,7 +3,7 @@ audio = pipeline(model="openai/whisper-small")
 import os
 def AUDIO(audioPath):
     #text = audio(audioPath)
-    text = "cococ mon ami "
+    text = audio(audioPath)
     return text
 
 

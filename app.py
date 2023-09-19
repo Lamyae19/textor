@@ -40,8 +40,9 @@ def progressData():
     current_datetime = datetime.datetime.now()
     path = "uploads/"+ current_datetime.strftime("%Y%m%d%H%M%S")  + ".wav"
     audio_file.save(path)
-    text = AUDIO(audioPath=path)
-    return {"text" : text}
+    TEXT = AUDIO(audioPath=path)
+    print("text    " , TEXT)
+    return {"TEXT" : TEXT}
 
 
 @app.route('/convert',methods=['GET','POST'])

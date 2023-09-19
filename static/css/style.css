@@ -12,7 +12,7 @@
 .container{
     width: 100%;
     height: 100vh;
-    background-image: url('/static/images/ai-nuclear-energy-background-future-innovation-disruptive-technology.jpg');
+    background-image: url('/static/images/ai.jpg');
     background-position: center;
     background-size: cover;   
     padding-left: 8%;
@@ -239,7 +239,7 @@ p{
 
 audio {
     filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
-  width: 50%;
+  width: 50px;
     height: 30px;
     border-radius: 40px;
     justify-self: center;

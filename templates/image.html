@@ -11,13 +11,13 @@
 </head>
 <body> 
     <div  class="navbar1">
-        <a src="#" class="logo1">ExtraText</a>
+        <a href="{{ url_for('home')}}" class="logo1">ExtraText</a>
         <nav class="nav-links">
             
         <ul>
             <li><a href="{{ url_for('home')}}" methods="POST">Home</a></li>
-            <li><a href="{{ url_for('home')}}#services" methods="POST"#services">Service</a></li>
-            <li><a href="#" methods="POST">About</a></li>
+            <li><a href="{{ url_for('home')}}#services" methods="POST">Service</a></li>
+            <li><a href="{{ url_for('home')}}#about" methods="POST">About</a></li>
             <li><div class='bx bx-menu' id="menu-icon"></div></li>
         </ul>
         </nav>

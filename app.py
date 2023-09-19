@@ -7,6 +7,10 @@ import datetime
 app = Flask(__name__)  # static_url_path="/static"
 from models.models import AUDIO
 
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
+upload_dir = 'static/upload'
+os.makedirs(upload_dir, exist_ok=True)
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -45,30 +49,18 @@ def convert():
     
     if request.method == "POST":
         if 'image_file' not in request.files:
-            return "No file part"
+            return {"TEXT": "No file part"}
 
         image_file = request.files['image_file']
-        if image_file.filename == '':
-            return "No selected file"
-        
-        #print(image_file.filename)
-        print(request)
-        #uploadimage=request.form.get('uploadimage')
-        pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-        
-        upload_dir = 'static/upload'
-        os.makedirs(upload_dir, exist_ok=True)
-        
-        file_path = os.path.join(upload_dir, image_file.filename)
-        print(file_path)
-        image_file.save(file_path)
-        #image_url = url_for('static', filename=file_path)
-
-        img = Image.open(file_path)
+        extn = "."+str(image_file.filename).split(".")[-1]
+        current_datetime = datetime.datetime.now()
+        path = "uploads/" + current_datetime.strftime("%Y%m%d%H%M%S") + extn
+        image_file.save(path)
+        img = Image.open(path)
         text = pytesseract.image_to_string( img )
         print(text)
     
-        return render_template('image.html',file_path=file_path,text=text)
+        return
     return render_template('image.html')
 
 if __name__ == '__main__':

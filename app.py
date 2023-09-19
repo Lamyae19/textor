@@ -6,6 +6,7 @@ import pytesseract
 import datetime
 app = Flask(__name__)  # static_url_path="/static"
 from models.models import AUDIO
+
 @app.route('/')
 def index():
     return render_template('index.html')

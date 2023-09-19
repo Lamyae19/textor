@@ -1,7 +1,7 @@
 
 var start = document.getElementById("start");
 var stop = document.getElementById("stop");
-var rspP = document;getElementById("textFromAudio")
+var rspP = document.getElementById("textFromAudio");
 stop.disabled =true;
 var audio = document.querySelector('#audio');
 
@@ -67,7 +67,7 @@ function sendAudioToServer(file)
     })
     .then(response => response.json())
     .then(data => {
-    var text = data.TEXT
+    var text = data.TEXT;
     rspP.innerHTML = text;
 
     })

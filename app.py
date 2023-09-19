@@ -37,6 +37,7 @@ def progressData():
     path = "uploads/"+ current_datetime.strftime("%Y%m%d%H%M%S")  + ".wav"
     audio_file.save(path)
     TEXT = AUDIO(audioPath=path)
+    print("text    " , TEXT)
     return {"TEXT" : TEXT}
 
 

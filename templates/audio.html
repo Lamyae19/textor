@@ -9,12 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
-<body>
     <body>
         <div  class="navbar1">
             <a href="{{ url_for('home')}}" class="logo1">ExtraText</a>
             <nav class="nav-links">
-                
+
             <ul>
                 <li><a href="{{ url_for('home')}}" methods="POST">Home</a></li>
                 <li><a href="{{ url_for('home')}}#services" methods="POST">Service</a></li>
@@ -26,32 +25,32 @@
         <br><br><br><br><br><br>
     <section class="event" id="services">
         <div class="title">
-            <h1>Convert Audio To Text</h1> 
+            <h1>Convert Audio To Text</h1>
             <div class="line"></div>
             <br><br><br>
         </div>
         <div class="row2">
             <div class="col2">
-        
-                
+
+
             <span>Select audio file: </span>
             <label>
             <input type="file" name="uploadfile" accept="audio/*" id="audiofile">
             <span><u>here</u> </span>
         </label>  <br> <br>
-        <button onclick="uploadfile()" class="button">Update</button>
+        <button onclick="uploadfile()" class="button">Upload</button>
             <br><br>
-        
+
             <span>Or</span><br><br>
             <span>Start recording audio</span><br>
-           
+
             <button id="start" name="record" class="button">Start</button>
             <button id="stop" name="stop" class="button">Stop</button>
         </div>
-        
-            
+
+
         </div>
-    
+
         <div></div>
         <audio id="audio" src="" controls></audio>
         </section>
@@ -59,6 +58,7 @@
             <div class="footer-content">
                 <p>ExtraText is a web application who can extract a text from a image or convert audio to text in minute.Simple and easy to use it</p>
                 <p>Copyright ©  2023 ExtraText</p>
+            </div>
           </section>
     <script src="{{ url_for('static', filename='js/audio.js') }}"></script>
 </body>

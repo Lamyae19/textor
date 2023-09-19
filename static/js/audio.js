@@ -1,9 +1,12 @@
 
-var start = document.querySelector('button[name="record"]');
-var stop = document.querySelector('button[name="stop"]');
+var start = document.getElementById("start");
+var stop = document.getElementById("stop");
+stop.disabled =true;
 var audio = document.querySelector('#audio');
 
 start.addEventListener('click', async () => {
+    start.disabled = true;
+    stop.disabled = false;
     let stream = await navigator.mediaDevices.getUserMedia({audio: true, video: false});
     let mediaRecorder = new MediaRecorder(stream);
     mediaRecorder.start();
@@ -27,6 +30,8 @@ start.addEventListener('click', async () => {
         sendAudioToServer(blod);
     }
     stop.addEventListener('click',()=>{
+            stop.disabled = true;
+            start.disabled = false;
             mediaRecorder.stop();
     })
 })

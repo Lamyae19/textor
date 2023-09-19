@@ -271,7 +271,12 @@ audio {
     width: 100%;
     margin-top: 20px;
 }
-
+#start:disabled,
+#stop:disabled {
+  background-color: gray; /* Change the background color to gray */
+  color: white; /* Change the text color to white (or any color you prefer) */
+  cursor: not-allowed; /* Change the cursor to indicate that it's not clickable */
+}
 
 
 

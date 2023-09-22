@@ -61,7 +61,7 @@ def convert():
         text = pytesseract.image_to_string( img )
         print(text)
     
-        return
+        return render_template('image.html', text=text)
     return render_template('image.html')
 
 if __name__ == '__main__':

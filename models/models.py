@@ -1,10 +1,11 @@
 from transformers import pipeline
-audio = pipeline(model="openai/whisper-small")
-import os
-def AUDIO(audioPath):
-    #text = audio(audioPath)
-    text = audio(audioPath)
+audio = pipeline("automatic-speech-recognition", model="openai/whisper-small")
+
+
+def AUDIO(audio_path):
+    text = audio(audio_path)
     return text
+
 
 
 

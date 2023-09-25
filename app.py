@@ -1,11 +1,14 @@
 
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, url_for, request, send_file
 import os
 from PIL import Image
 import pytesseract
 import datetime
+import models
+from  models.models import AUDIO
 app = Flask(__name__)  # static_url_path="/static"
-from models.models import AUDIO
+
+#language = "English"
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
@@ -40,7 +43,7 @@ def progressData():
     current_datetime = datetime.datetime.now()
     path = "uploads/"+ current_datetime.strftime("%Y%m%d%H%M%S")  + ".wav"
     audio_file.save(path)
-    TEXT = AUDIO(audioPath=path)
+    TEXT = AUDIO(path)
     print("text    " , TEXT)
     return {"TEXT" : TEXT}
 
@@ -60,9 +63,14 @@ def convert():
         img = Image.open(path)
         text = pytesseract.image_to_string( img )
         print(text)
-    
-        return render_template('image.html', text=text)
+        # Get the URL for the uploaded image
+        image_url = url_for('uploaded_file', filename=path.split("/")[-1])
+
+        return render_template('image.html', image_url=image_url, text=text)
     return render_template('image.html')
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_file(f'uploads/{filename}', as_attachment=True)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -67,8 +67,9 @@ function sendAudioToServer(file)
     })
     .then(response => response.json())
     .then(data => {
-    var text = data.TEXT;
-    rspP.innerHTML = text;
+        var text = data.TEXT;
+        console.log(text["text"])
+    rspP.innerHTML = text["text"];
 
     })
     .catch(error => console.log(error));

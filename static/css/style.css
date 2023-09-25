@@ -243,6 +243,7 @@ audio {
     height: 30px;
     border-radius: 40px;
     justify-self: center;
+
 }
 
 
@@ -254,6 +255,21 @@ input[type="file"] {
 label {
     cursor: pointer;
     color: #007BFF;
+}
+
+.col4 {
+  text-align: center;
+  margin-top: 20px;
+  border:
+}
+
+.col4 span {
+  font-weight: bold;
+}
+
+.col4 label {
+  display: block;
+  margin-top: 10px;
 }
 
 /* Style the buttons 

@@ -23,14 +23,14 @@
             </nav>
         </div>
         <br><br><br><br><br><br>
-    <section class="event" id="services">
+    <section class="event">
         <div class="title">
             <h1>Convert Audio To Text</h1>
             <div class="line"></div>
             <br><br><br>
         </div>
-        <div class="row2">
-            <div class="col2">
+
+            <div class="col4">
 
 
             <span>Select audio file: </span>
@@ -41,24 +41,23 @@
         <button onclick="uploadfile()" class="button">Upload</button>
             <br><br>
 
-            <span>Or </span><br><br>
-            <span>Start recording audio</span><br>
+            <span>Or Start recording audio</span><br>
 
             <button id="start" name="record" class="button">Start</button>
             <button id="stop" name="stop" class="button">Stop</button>
+            <div >
+            <audio id="audio" src=""   controls></audio>
+            <div>
         </div>
 
-        </div>
-        <input type="submit" class="button">
-        <div >
-            <audio id="audio" src=""   controls></audio>
-        <div>
+
+        </section>
+
                 <h3 >Text : </h3>
-                <p id="textFromAudio"></p>
+                <p id="textFromAudio" class="para"></p>
             </div>
         </div>
 
-        </section>
         <section class="footer">
             <div class="footer-content">
                 <p>ExtraText is a web application who can extract a text from a image or convert audio to text in minute.Simple and easy to use it</p>

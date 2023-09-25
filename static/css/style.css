@@ -242,7 +242,6 @@ audio {
   width: 50px;
     height: 30px;
     border-radius: 40px;
-    justify-self: center;
 
 }
 
@@ -260,7 +259,9 @@ label {
 .col4 {
   text-align: center;
   margin-top: 20px;
-  border:
+  border: #7c7c7c 2px solid;
+    border-radius: 4px;
+    padding: 25px;
 }
 
 .col4 span {
@@ -271,7 +272,16 @@ label {
   display: block;
   margin-top: 10px;
 }
-
+.col5{
+    display: block;
+    margin: 30px;
+    justify-content:center;
+}
+#textFromAudio {
+  text-align: justify;
+  font-size: 15px;
+  color: #000;
+}
 
 /* Style the buttons 
 button {
@@ -285,8 +295,10 @@ button {
 
 /* Style the audio controls */
 audio {
-    width: 100%;
+    width: 50%;
     margin-top: 20px;
+    justify-content: center;
+    align-items: center;
 }
 #start:disabled,
 #stop:disabled {
